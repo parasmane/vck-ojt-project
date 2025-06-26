@@ -1,117 +1,14 @@
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-}
 .footer {
-    /* position: fixed; */
-    background-color: #343a40;
-    color: #fff;
-    padding: 15px 20px;
-    text-align: center;
-    font-size: .9em;
-    box-shadow: 0 -2px 8px #0000001a;
-    flex-shrink: 0;
-    margin-top: auto;
+  background-color: #434a52; /* Match header background */
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 0.9em;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.141); 
+  flex-shrink: 0; 
+  margin-top: auto; 
 }
-.chatbot-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    font-family: Arial, sans-serif;
-}
-
-div {
+footer {
     display: block;
     unicode-bidi: isolate;
-}
-
-
-element.style {
-    width: 100px;
-    height: auto;
-}
-
-img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-.chatbot-open-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    font-size: 2.5em;
-    display: flex
-;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 8px #0003;
-    transition: transform .2s ease-in-out;
-}
-
-button {
-    
-    text-rendering: auto;
-    color: buttontext;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    text-align: center;
-    cursor: default;
-}
-.chatbot-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    font-family: Arial, sans-serif;
-}
-.chatbot-window.closed {
-    opacity: 0;
-    pointer-events: none;
-    transform: scale(.8);
-    visibility: hidden;
-}
-.chatbot-window {
-    background-color: #fff;
-    border: 1px solid #E0E0E0;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px #00000026;
-    width: 350px;
-    height: 450px;
-    display: flex
-;
-    flex-direction: column;
-    overflow: hidden;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform-origin: bottom right;
-    transition: transform .3s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out;
-}
-.chatbot-window {
-    background-color: #fff;
-    border: 23px solid #E0E0E0;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px #00000026;
-    width: 350px;
-    height: 450px;
-    display: flex
-;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
-    transition: all .3s ease-in-out;
-    transform-origin: bottom right;
 }

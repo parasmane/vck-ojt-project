@@ -6,20 +6,22 @@ import ContactPage from "./pages/ContactPage";
 import AdmissionsPage from "./pages/AdmissionsPage";
 import './styles/Pages.css'
 import "./App.css";
+import ChatbotComponent from "./components/Chatbot/ChatbotComponent";
 
 const App = () => {
   return(
-    <div class="all">
+    <div class="all " >
       
       <Router>
         <Routes>
-          <Route path="/home" element={<HomePage/>}/>
+          <Route path="/" element={<HomePage/>}/>
           <Route path="/about" element={<AboutPage/>}/>
           <Route path="/courses" element={<CoursesPage/>}/>
           <Route path="/contact" element={<ContactPage/>}/>
           <Route path="/admissions" element={<AdmissionsPage/>}/>
           
         </Routes>
+        <ChatbotComponent/>
       </Router>
       </div>
   )

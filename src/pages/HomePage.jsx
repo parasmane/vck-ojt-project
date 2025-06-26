@@ -21,7 +21,7 @@ const HomePage = () => {
        </ul>
        <h2>Campus Life & Facilities</h2>
        <img  src="./images/students-studying-DbLGuwF_.jpeg" height={200}></img>
-       <img  src="./images/campus-life-Crkero7B.jpg" height={200}></img>
+       <img  src="./images/campus-life-Crkero7B.jpg" height={200} width={400}></img>
        <p>Explore our vibrant campus and state-of-the-art facilities designed to enhance your learning experience and personal growth.</p>
            <div class="call-to-action">
               <p>Ready to explore our courses?</p>

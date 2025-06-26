@@ -1,83 +1,76 @@
+import React, { useState } from "react"; 
 import { Link } from "react-router-dom";
 import "./Header.css";
-const Header = () => {
+function Header() {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+ 
+  const closeDrawer = () => {
+    setIsDrawerOpen(false);
+  };
   return (
-    <div>
-      <header class="header">
-        <nav>
-          <div class="logo">
-            <strong id="v">Vivekanand College</strong>
-            <div class="n">
-              <Link to="/home">Home</Link>
-              <Link to="/about">About</Link>
-              <Link to="/courses">Courses</Link>
-              <Link to="/contact">Contact</Link>
-              <Link to="/admissions">
-                <button class="apply-btn">Apply Now!</button>
-              </Link>
-            </div>
-          </div>
-        </nav>
-      </header>
-
-      {/* <header class="main-header">
-        {" "}
-        <div class="college-name">
-          <a href="/" data-discover="true">
-            Vivekanand College
-          </a>{" "}
-        </div>
-        <nav class="navbar desktop-nav">
-          <a class="nav-item" href="/home" data-discover="true">
-            Home
-          </a>
-          <a class="nav-item" href="/about" data-discover="true">
-            About
-          </a>
-          <a class="nav-item" href="/courses" data-discover="true">
-            Courses
-          </a>
-          <a class="nav-item" href="/contact" data-discover="true">
-            Contact
-          </a>
-          <a
-            class="nav-item btn primary-btn"
-            href="/admissions"
-            data-discover="true"
-          >
-            Apply Now!
-          </a>{" "}
-        </nav>
-        <button class="hamburger-menu">
-          <span class="hamburger-icon"></span>
-          <span class="hamburger-icon"></span>
-          <span class="hamburger-icon"></span>
+    <header className="main-header">
+      {" "}
+      
+      <div className="college-name">
+        <Link to="/">Vivekanand College</Link>{" "}
+       
+      </div>
+      <nav className="navbar desktop-nav">
+        <Link to="/" className="nav-item">
+          Home
+        </Link>
+        <Link to="/about" className="nav-item">
+          About
+        </Link>
+        <Link to="/courses" className="nav-item">
+          Courses
+        </Link>
+        <Link to="/contact" className="nav-item">
+          Contact
+        </Link>
+        <Link to="/admissions" className="nav-item btn primary-btn">
+          Apply Now!
+        </Link>{" "}
+       
+      </nav>
+      
+      <button className="hamburger-menu" onClick={toggleDrawer}>
+        <span className="hamburger-icon"></span>
+        <span className="hamburger-icon"></span>
+        <span className="hamburger-icon"></span>
+      </button>
+      <nav className={`drawer-nav ${isDrawerOpen ? "open" : ""}`}>
+        <button className="close-drawer-btn" onClick={toggleDrawer}>
+          ✕
         </button>
-        <nav class="drawer-nav ">
-          <button class="close-drawer-btn">✕</button>
-          <a class="nav-item" href="/" data-discover="true">
-            Home
-          </a>
-          <a class="nav-item" href="/about" data-discover="true">
-            About
-          </a>
-          <a class="nav-item" href="/courses" data-discover="true">
-            Courses
-          </a>
-          <a class="nav-item" href="/contact" data-discover="true">
-            Contact
-          </a>
-          <a
-            class="apply-btn"
-            href="/admissions"
-            data-discover="true"
-          >
-            Apply Now!
-          </a>
-        </nav>
-      </header> */}
-
-    </div>
+        <Link to="/" className="nav-item" onClick={closeDrawer}>
+          Home
+        </Link>
+        <Link to="/about" className="nav-item" onClick={closeDrawer}>
+          About
+        </Link>
+        <Link to="/courses" className="nav-item" onClick={closeDrawer}>
+          Courses
+        </Link>
+        <Link to="/contact" className="nav-item" onClick={closeDrawer}>
+          Contact
+        </Link>
+        <Link
+          to="/admissions"
+          className="nav-item btn primary-btn"
+          onClick={closeDrawer}
+        >
+          Apply Now!
+        </Link>
+      </nav>
+      {/* Overlay when drawer is open */}
+      {isDrawerOpen && (
+        <div className="drawer-overlay" onClick={toggleDrawer}></div>
+      )}
+    </header>
   );
-};
+}
 export default Header;

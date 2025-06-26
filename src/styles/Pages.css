@@ -18,10 +18,19 @@
     
     
 }
-
+/* element.style {
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: auto;
+} */
 .page-container {
-    max-width: auto;
-    height: auto;
+    /* max-width: 960px; */
+    height: 490px;
+    overflow:auto;
+     overflow-x: auto;
+    overflow-y: auto;
+     max-width: auto; 
+    /* height: auto;  */
     color: black;
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px;
@@ -31,10 +40,11 @@
             margin: 25px ;
         padding: 25px;
         margin-bottom: 25px;
-        margin-left: 80px;
-         margin-right:80px ;
+        margin-left: 250px;
+         margin-right:250px ;
         
 }
+
 div {
     display: block;
     unicode-bidi: isolate;
@@ -75,7 +85,7 @@ div {
 }
 
 a:-webkit-any-link {
-    color: -webkit-link;
+    /* color: -webkit-link; */
     cursor: pointer;
     text-decoration: underline;
 }
@@ -93,4 +103,83 @@ a:-webkit-any-link {
     height: 100%;
     object-fit: fill;
     filter: brightness(60%);
+}
+
+
+
+@media (max-width: 768px) {
+  .page-container {
+    margin: 15px auto;
+    /* Slightly less margin on smaller screens */
+    padding: 15px;
+    /* Slightly less padding */
+  }
+
+  /* Home Page - Hero Section */
+  .hero-section {
+    height: 250px;
+    /* Shorter banner on smaller screens */
+  }
+
+  .hero-overlay-text h1 {
+    font-size: 2.2em;
+    /* Smaller heading */
+  }
+
+  .hero-overlay-text p {
+    font-size: 1em;
+    /* Smaller paragraph */
+  }
+
+  .hero-btn {
+    padding: 10px 20px;
+    /* Smaller button */
+    font-size: 1em;
+  }
+
+  /* Image Gallery */
+  .image-gallery {
+    grid-template-columns: 1fr;
+    /* Stack images in a single column */
+  }
+
+  .image-gallery img {
+    height: 180px;
+    /* Adjust height for stacked images */
+  }
+
+  /* Admissions Table */
+  /* .admissions-table, .course-details-table {
+    display: block; /* Make table block level */
+  /* overflow-x: auto; Enable horizontal scroll for table on small screens */
+  /* white-space: nowrap; Prevent content from wrapping inside cells */
+  /* -webkit-overflow-scrolling: touch; For smooth scrolling on iOS */
+  /* } */
+  */ .admissions-table thead,
+  .admissions-table tbody,
+  .admissions-table th,
+  .admissions-table td,
+  .admissions-table tr {
+    display: block;
+    /* Make table elements stack */
+    width: auto;
+    /* Allow natural width */
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  /* Further adjustments for very small screens (phones) */
+  .page-container {
+    padding: 10px;
+  }
+
+  .hero-overlay-text h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-overlay-text p {
+    font-size: 0.9em;
+  }
 }

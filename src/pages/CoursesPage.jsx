@@ -17,8 +17,9 @@ const CoursesPage = () => {
           academic advancements.
         </p>
         <h2>Discover Campus Life</h2>
-        <video controls src="D:\ojt\vck-react-project\vck-react-app\public\videos\college.mp4" width="auto" height="400px"  >
-            Your browser does not support the video tag.
+        <video controls width="100%" height="auto" className="course-video">
+          <source src="D:\ojt\vck-react-project\vck-react-app\public\videos\college-tour.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
 
         <h2>Undergraduate Programs (UG)</h2>
