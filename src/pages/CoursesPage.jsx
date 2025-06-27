@@ -1,6 +1,6 @@
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer"
-
+// import CollegeTourVideo from '.../public/videos/college-tour.mp4'; 
 const CoursesPage = () => {
   return (
     <div>
@@ -18,7 +18,7 @@ const CoursesPage = () => {
         </p>
         <h2>Discover Campus Life</h2>
         <video controls width="100%" height="auto" className="course-video">
-          <source src="D:\ojt\vck-react-project\vck-react-app\public\videos\college-tour.mp4" type="video/mp4" />
+          <source src="" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
