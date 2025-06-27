@@ -1,11 +1,14 @@
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
+import { Link } from "react-router-dom";
 const HomePage = () => {
   return(
     <div>
       <Header/>
       <div class="page-container">
-      <div class="hero-section"><img  src="./images/college-banner-Cz0xylpt.png" class="hero-banner-image " ></img><div class="hero-overlay-text"><h1>Welcome to Vivekanand College!</h1><p>Your journey to excellence starts here.</p><a class="btn hero-btn" href="/admissions" data-discover="true">Apply Now!</a> </div></div>
+      <div class="hero-section"><img  src="./images/college-banner-Cz0xylpt.png" class="hero-banner-image " ></img><div class="hero-overlay-text"><h1>Welcome to Vivekanand College!</h1><p>Your journey to excellence starts here.</p><Link to="/admissions" class="btn hero-btn">
+            Apply Now!
+          </Link>{" "} </div></div>
 
       <div class="home1">
       
@@ -25,9 +28,9 @@ const HomePage = () => {
        <p>Explore our vibrant campus and state-of-the-art facilities designed to enhance your learning experience and personal growth.</p>
            <div class="call-to-action">
               <p>Ready to explore our courses?</p>
-              <a class="button" href="/courses" >
-                Explore Courses
-              </a>
+              <Link to="/courses" className="btn">
+          Explore Courses
+        </Link>{" "}
             </div>
       </div>
     </div>

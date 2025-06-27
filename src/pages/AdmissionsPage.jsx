@@ -1,6 +1,7 @@
 import Header from "../components/Header/Header";
 import '../styles/Pages.css';
 import Footer from "../components/Footer/Footer"
+import { Link } from "react-router-dom";
 
 const Admissions = () => {
   return (
@@ -75,13 +76,8 @@ const Admissions = () => {
       <p>
         For detailed information on postgraduate program admissions, specific
         program syllabi, and fee structures, please visit our{" "}
-        <a href="/courses" data-discover="true">
-          Courses page
-        </a>{" "}
-        or{" "}
-        <a href="/contact" data-discover="true">
-          Contact us
-        </a>{" "}
+        <Link to="/courses">Courses page</Link> or{" "}
+        <Link to="/contact">Contact us</Link>
         directly.
       </p>
       
